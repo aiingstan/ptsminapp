@@ -1,0 +1,21 @@
+<!-- 用于数据处理和页面渲染  -->
+<wxs module='wxsfoobar'>
+  module.exports = {
+    foo: 'bar'
+  }
+</wxs>
+
+<block wx:if="{{isAuthorized}}">
+  <view>
+    <include src="../templates/layout/header.wxml"/>
+    <text>{{wxsfoobar.foo}}</text>
+  </view>
+  <view>
+    <navigator open-type='navigate' url='./newrequest'>申请设置变更</navigator>
+  </view>
+  
+</block>
+
+<view wx:else>
+  <text>您没有权限进行操作</text>
+</view>  

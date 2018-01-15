@@ -1,0 +1,40 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section section_gap">
+    <label class="section__title">碳化生产线</label>
+    <picker range="{{productionLines}}" value="{{productionLineIdx}}" bindchange='produnctionLinePicked'>
+      <label>{{productionLines[productionLineIdx]}}</label>
+    </picker>
+  </view>
+  <view class="section section_gap">
+    <label class="section__title">产品设置</label>
+    <view>
+      <radio-group name="product-setting">
+        <label><radio value="nc"/>维持不变</label>
+        <label><radio value="nv"/>设置新值</label>
+      </radio-group>
+    </view>
+    <view>
+      <input placeholder='输入新碳丝批号' confirm-type='next'></input>
+      <input placeholder='输入新碳丝锭型号' confirm-type='done'></input>
+    </view>
+  </view>
+  <view class="section section_gap">
+    <label class="section__title">速度设置</label>
+    <view>
+      <radio-group name="speed-setting">
+        <label><radio value="nc"/>维持不变</label>
+        <label><radio value="nv"/>设置新值</label>
+      </radio-group>
+    </view>
+    <view>
+      <input placeholder='原丝入丝速度' confirm-type='next' type='number'></input>
+      <label>米/分钟</label>
+      <input placeholder='碳丝收卷速度' confirm-type='done' type='number'></input>米/分钟
+    </view>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+  </view>
+</form>
+

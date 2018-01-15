@@ -11,6 +11,10 @@ Page({
   },
   //事件处理函数
   bindViewTap: function() {
+    this.setData({
+      motto: 'Hello Yoland'
+    })
+    console.log('tapped')
     wx.navigateTo({
       url: '../logs/logs'
     })
@@ -44,7 +48,6 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
