@@ -14,7 +14,9 @@ Page({
       "碳化三号线",
       "碳化四号线",
       "碳化五号线",
-    ]
+    ],
+    setModel: false,
+    setSpeed: false
   },
 
   /**
@@ -73,18 +75,30 @@ Page({
   
   },
 
-  formSubmit: function(e){
-    console.log(e.detail.value)
+  formSubmit: function(){
   },
 
-  formReset: function(){
-    console.log('form cleaned')
+  formCancel: function(){
+    wx.switchTab({
+      url: 'requestlist',
+    })
   },
 
   produnctionLinePicked: function(e){
-    console.log(e.detail.value)
     this.setData({
       productionLineIdx: e.detail.value
+    })
+  },
+
+  toggleSetModel: function(e){
+    this.setData({
+      setModel: e.detail.value
+    })
+  },
+
+  toggleSetSpeed: function (e) {
+    this.setData({
+      setSpeed: e.detail.value
     })
   }
 })

@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/ptssetting/newrequest",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/ptssetting/newrequest",
     "pages/ptssetting/requestlist"
   ],
   "tabBar": {
